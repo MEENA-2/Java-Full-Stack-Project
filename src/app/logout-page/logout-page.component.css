@@ -1,0 +1,39 @@
+.card{
+    width: 18rem; 
+    height:20rem; 
+    border-radius: 2rem; 
+    opacity:0.9; 
+    margin-left: 400px; 
+    background-color:rgb(191, 225, 236) ;
+}
+
+h5{
+    color:darkblue; 
+    font-weight: bolder;
+}
+
+p{
+    color:rgb(182, 4, 102); 
+    font-size:large;
+}
+
+a{
+    color:darkred;
+    text-decoration: none;
+}
+
+button{
+    text-align:center;
+    border-color:crimson; 
+    border-style: inset; 
+    border-radius: 0.5rem; 
+    background-color:rgb(204, 152, 9); 
+    padding:6px;
+}
+
+.btn a:hover{
+    background-color: rgb(97, 247, 189);
+    border-radius: 2rem;
+    color:maroon;
+    padding: 7px;
+}

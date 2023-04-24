@@ -1,0 +1,89 @@
+/* stylings for student-list component template */
+
+table{
+    color:rgb(248, 245, 245);
+}
+
+.table-hover:hover{
+    color :rgb(207, 52, 47);
+    background-color: rgb(195, 230, 233);
+}
+
+h2{
+    /* color:white; */
+    color:rgb(207, 52, 47);
+    text-align: center;
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+tr{
+    text-align: center;
+}
+
+tr:hover{
+    background-color: darkseagreen;
+}
+
+button:hover{
+    background-color: rgb(245, 219, 75);
+}
+.btn-secondary{
+    background-color:purple;
+}
+.btn-success{
+    background-color:darkslategrey;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.btn-primary{
+    background-color: sienna;
+}
+.btn-info{
+    
+    margin-left: 15px;
+}
+.btn-outline-secondary{
+    background-color: black;
+    color:white;
+}
+
+.btn-outline-primary{
+    background-color: rgb(50, 168, 189);
+    color:rgb(12, 12, 12);
+}
+
+form{
+    color:green;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bolder;
+    margin-left:15px;
+    padding: 10px 0px;
+}
+
+form:hover{
+    color: rgb(3, 0, 0);
+}
+#dropdown{
+    padding: 7px;
+}
+
+.filterByGrade{
+    background-color: rgb(212, 212, 129);
+    border-radius: 10px;
+}
+
+.filterByGrade:hover{
+    background-color: rgb(33, 172, 214);
+}
+
+#removeAll{
+    background-color:red; 
+    color:whitesmoke;
+}
+#removeAll:hover{
+    background-color: rgb(245, 219, 75);
+}

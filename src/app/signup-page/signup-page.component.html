@@ -1,0 +1,45 @@
+<!-- When a new user visit our page and wish to check out our services and work,
+    they could register first. then they will be redirected to home page to do login.  -->
+
+<body>
+    <div class="main-parent">
+        <div class="form-wrap">
+            <form action="">
+                <h1><span>Registration Form</span></h1>
+                <div class="single-input">
+                    <label>First Name : </label> &nbsp;
+                    <input id="fname" type="text" name="firstName" [(ngModel)]="firstName" placeholder="First name"  required="required" />
+                </div>
+                <div class="single-input">
+                    <label>Last Name : </label> &nbsp;
+                    <input id="lname" type="text" name="lastName" [(ngModel)]="lastName" placeholder="Last name" required="required" />
+                </div>
+                <div class="single-input">
+                    <label>E-mail : </label> &nbsp;
+                    <input id="email" type="email" name="email" [(ngModel)]="email" placeholder="Email Address" required="required" />
+                </div>
+                <div class="single-input">
+                    <label>Password : </label> &nbsp;
+                    <input id="pass" [type]="changeType?'password':'text'" name="password" [(ngModel)]="password" placeholder="Password" minlength="5" maxlength="12" required="required" />
+                    <span class="eyeIcon" (click)="viewPass()">
+                        <i [ngClass]="visiblePass?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i>
+                    </span>
+                </div>
+                <div class="single-input">
+                    <label>Confirm Password : </label> &nbsp;
+                    <input id="cpass" [type]="changeType?'password':'text'" name="confirmPass" [(ngModel)]="confirmPass" placeholder="Confirm Password" minlength="5" maxlength="12" required="required" />
+                    <span class="eyeIcon" (click)="viewPass()">
+                        <i [ngClass]="visiblePass?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i>
+                    </span>
+                </div>
+                <br>
+                <div class="submit-button">
+                    <a (click)="successPopUp()" class="btn btn-2 text-center" style="text-decoration: none;"> Register </a>
+                </div>
+                <div class="account-have">
+                    <span>Have an account ? please<a href="login"> Login</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

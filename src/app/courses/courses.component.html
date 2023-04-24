@@ -1,0 +1,120 @@
+
+<!-- The topmost part of this page is the place where dropdown is located to select grade and view courses related to it -->
+<!-- <div class="top" style="background-color: rgb(204, 204, 149); padding: 14px 0;">
+  
+  <div class="dropdown">
+    <label class="head" style="color:crimson; font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 25px; margin-left: 50px;">
+      Select grade and explore courses...
+    </label>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Select Your Grade
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">class 6 to 10</a></li>
+      <li><a class="dropdown-item" href="#">class 11 or 12</a></li>
+    </ul>
+  </div>
+</div>
+<br> -->
+
+<!-- If a grade of the student selected is of lower grade, this corresponding subjects will be displayed
+   to select one among them. -->
+<div class="d-flex flex-row bd-highlight mb-3" id="lowerGrade" *ngIf= "checkLowerGrade()">
+  <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        <div class="card" style="width: 22rem;">
+          <img src="..\..\assets\maths.jpg" class="card-img-top" alt="Maths" style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Mathematics</h5>
+            <p class="card-text">Mathematics is the basic stepstone for all the following professional learnings. From Science to Space, it serves the practical explanation.</p>
+            <label for="MathTeacher" style="color: Green; font-size:15px; font-weight: bold;">Staff : </label> &nbsp;
+            <span class="card-text" id="MathTeacher">Mrs. R.Gayathri, M.sc.,B.Ed.</span>
+          </div>
+        </div>
+      </label>
+    </div> 
+    &nbsp; &nbsp; &nbsp;
+    <div class="form-check" style="margin-left: 5px;">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" >
+      <label class="form-check-label" for="flexCheckDefault1">
+        <div class="card" style="width: 22rem;">
+          <img src="..\..\assets\science.jpg" class="card-img-top" alt="Science" style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Science</h5>
+            <p class="card-text">Science is Scientific, Comprehensive, Investigative and Exploration of Natural and Chemical Environmental effects. This helps understand the environment.</p>
+            <label for="ScienceTeacher" style="color: Green; font-size:15px; font-weight: bold;">Staff : </label> &nbsp;
+            <span class="card-text" id="ScienceTeacher">Mr. S.Chandran, M.sc.,M.Ed.,Ph.D.</span>
+          </div>
+        </div>
+      </label>
+    </div>
+    &nbsp; &nbsp; &nbsp;
+    <div class="form-check" style="margin-left: 5px;">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+      <label class="form-check-label" for="flexCheckDefault2">
+        <div class="card" style="width: 22rem;">
+          <img src="..\..\assets\Social.png" class="card-img-top" alt="Social" style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Social Studies</h5>
+            <p class="card-text">Social is the subject of learning and exploring historical events, geographical values, civil laws and economical status of a country.</p>
+            <label for="SocialTeacher" style="color: Green; font-size:15px; font-weight: bold;">Staff : </label> &nbsp;
+            <span class="card-text" id="SocialTeacher">Mr. R.Kumar, M.sc., Ph.D</span>
+          </div>
+        </div>
+      </label>
+    </div> 
+</div>
+
+
+<br>
+
+<!-- If a grade of the student selected is of higher grade, this corresponding subjects will be displayed
+   to select one among them. -->
+<div class="d-flex flex-row bd-highlight mb-3" id="higherGrade" *ngIf= "!checkLowerGrade()">
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+    <label class="form-check-label" for="flexCheckDefault3">
+        <div class="card" style="width: 22rem;">
+            <img src="..\..\assets\Bio-Maths.jpg" class="card-img-top" alt="Bio-Maths" style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Bio-Maths</h5>
+              <p class="card-text">This course ia complete package course of major subjects of Bio-Maths group, covering Maths-Physics-Chemistry-Biology.</p>
+              <label for="BioTeacher" style="color: Green; font-size:15px; font-weight: bold;">Staff : </label> &nbsp;
+              <span class="card-text" id="BioTeacher">Mr. R.Bharathi Raja, M.sc.,B.Ed.</span>
+            </div>
+          </div>
+    </label>
+  </div> 
+  &nbsp; &nbsp; &nbsp;
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+    <label class="form-check-label" for="flexCheckDefault4">
+        <div class="card" style="width: 22rem;">
+            <img src="..\..\assets\commerce.jpg" class="card-img-top" alt="Commerce" style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Commerce</h5>
+              <p class="card-text">Bundled package for commerce group includes finance, accounting, commerce and business-maths.</p>
+              <label for="CommerceTeacher" style="color: Green; font-size:15px; font-weight: bold;">Staff : </label> &nbsp;
+              <span class="card-text" id="CommerceTeacher">Prof. C.Ramadevi, M.sc.,B.Ed.,Ph.D</span>
+            </div>
+          </div>
+    </label>
+  </div>
+  &nbsp; &nbsp; &nbsp;
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+    <label class="form-check-label" for="flexCheckDefault5">
+        <div class="card" style="width: 22rem;">
+            <img src="..\..\assets\comp.jpg" class="card-img-top" alt="Computer Science" style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Computer Science</h5>
+              <p class="card-text">This Course includes Computer Science, Physics, Chemistry and Mathematics trained by experienced handlers. </p>
+              <label for="MathTeacher" style="color: Green; font-size:15px; font-weight: bold;">Staff : </label> &nbsp;
+              <span class="card-text" id="MathTeacher">Prof. V.Nalini, B.Tech., M.Ed.</span>
+            </div>
+          </div>
+    </label>
+  </div>  
+</div>
+<!-- <button class="btn btn-secondary">View All Courses</button> -->

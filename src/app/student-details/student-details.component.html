@@ -1,0 +1,46 @@
+<!-- when a user clicks the icon on student list table against a particular student id, 
+    only that data is displayed to user view inside a card -->
+
+<div class="card">
+    <h3> VIEW STUDENT DETAILS</h3>
+    <div class="container">
+        <div class="card1" style="text-align: left; width:75%; margin:0% 20%;">
+        <div>
+            <label><b> Student Id: </b></label> {{student.studentId}}
+        </div>
+        <div>
+            <label> <b> Student Name: </b></label> {{student.studentName}}
+        </div>
+        <div>
+            <label> <b> Standard: </b></label> {{student.standard}}
+        </div>
+        <div>
+            <label> <b> Contact No: </b></label> {{student.contactNo}}
+        </div>
+        <div>
+            <label> <b> E-mail: </b></label> {{student.email}}
+        </div>
+        <div>
+            <label> <b> D.O.B: </b></label> {{student.dateOfBirth}}
+        </div>
+        <div>
+            <label> <b> Gender: </b></label> {{student.gender}}
+        </div>
+        <div>
+            <label> <b> Fee Paid or Not: </b></label> {{student.feePaid}}
+        </div>
+        <div>
+            <label> <b> District: </b></label> {{student.district}}
+        </div>
+        <div>
+            <label> <b> Pincode: </b></label> {{student.pincode}}
+        </div>
+        </div>
+    </div>
+    <div class="backButton">
+        <button type="button" class="btn btn-sm btn-secondary btn-outline-primary" title="Click to go back"><a href="students" style="text-decoration: none;">Back to student List </a></button>
+    </div>
+    <br><br>
+</div>
+
+

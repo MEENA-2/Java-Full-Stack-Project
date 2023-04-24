@@ -1,0 +1,238 @@
+/* Added box shadow, flip card styling, Multi color view of background of card to make it more functionable*/
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html, body {
+  height: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 530px;
+  background: #12c2e9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+  .left-container {
+    background: #000000; 
+background: -webkit-linear-gradient(to right, #434343, #000000);
+background: linear-gradient(to right, #434343, #000000); 
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:450px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .right-container {
+    background: #000000; 
+    background: -webkit-linear-gradient(to left, #434343, #000000);
+    background: linear-gradient(to left, #434343, #000000); 
+    flex: 1;
+    max-width:75%;
+    height:450px;
+    padding: 10px;
+    margin: 20px;
+    border-radius:30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  @media only screen and (max-width: 860px) {
+    .card
+     {
+     flex-direction: column;
+     margin: 10px;
+     height: auto;
+     width: 90%;
+    }
+    .left-container{
+        flex: 1;
+        max-width:100%; 
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .card
+     {
+     flex-direction: column;
+     margin: 10px;
+    }
+    .left-container{
+        flex: 1;
+        max-width:100%; 
+    }
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  .gradienttext{
+    background-image: linear-gradient(to right, #ee00ff 0%, #fbff00 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  .left-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color:aliceblue
+  }
+  
+  table {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: 280px;
+    border-collapse: collapse;
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+  
+  td {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+  }
+  
+  td:first-child {
+    font-weight: bold;
+    color:#ee00ff;
+  }
+
+.credit {
+  color: #edeff0;
+  background-color: #c471ed;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: auto;
+  font-family: Verdana,Geneva,Tahoma,sans-serif;
+}
+       
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color:#f64f59;
+  height: 430px;
+
+  border-radius: 10px;
+  border-width: 5px;
+  border-style:inset;
+  border-color: #ee00ff;
+  margin: 2px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 30px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background: #000000; 
+    background: -webkit-linear-gradient(to left, #806666, #be7575);
+    background: linear-gradient(to left, #434343, #000000);
+  color: white;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  background: #bb7b7b; 
+    background: -webkit-linear-gradient(to left, #434343, #000000);
+    background: linear-gradient(to left, #434343, #000000);
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.flip-card-back p{
+  color:#ee00ff;
+  font-size: 30px;
+  font-style: italic;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.flip-card-back ul {
+  list-style: none; /* Remove default bullets */
+}
+
+.flip-card-back ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(223, 9, 158); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.icons{
+  display: flex;
+  padding: 15px 0;
+}
+.icons li{
+  display: block;
+  padding: 5px;
+  margin: 5px;
+}
+.icons li i{
+  color:#C850C0;
+  font-size: 26px;
+  opacity: 0.8;
+}
+.icons li i:hover{
+  color:#ffffff;
+  cursor: pointer;
+}

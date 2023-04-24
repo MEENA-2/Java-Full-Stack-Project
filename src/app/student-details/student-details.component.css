@@ -1,0 +1,45 @@
+/* Student-detail component html page will display the complete data of a particular student
+   inside a card and to make it more readable and styled, these stylings are used */
+
+h3{
+    color:rgb(207, 52, 47);
+    text-align: center;
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+b{
+    font-size: 18px;
+    color:rgb(10, 46, 209);
+    font-family:monospace;
+    
+}
+
+.card {
+    opacity:0.8;
+    background-color: rgb(156, 230, 226);
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(93, 200, 207);
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 70%;
+  }
+  
+  .card:hover {
+    box-shadow: 16px 8px 16px 8px rgba(202, 39, 61, 0.966);
+  }
+  
+  .container {
+    padding: 50px 16px;
+  }
+
+  .btn-secondary{
+    background-color:floralwhite;
+  }
+  .btn-secondary:hover{
+    background-color: aqua;
+    box-shadow: 4px 6px 8px 4px rgba(39, 51, 226, 0.966);
+  }

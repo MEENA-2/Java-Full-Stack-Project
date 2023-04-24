@@ -1,0 +1,164 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 6vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5vh;
+}
+.leftside{
+    width: 50%;
+    text-align: center;
+    align-items: center;
+}
+.leftside img{
+    width: 95%;
+    height: 95%;
+    border-radius: 2rem 1rem 2rem 1rem;
+    align-items: end;
+    
+      /* -webkit-transform: scaleX(-1);
+    transform:scaleX(-1); */
+}
+.leftside h1{
+    font-size: 50px;
+    color: rgb(255, 17, 0);
+    padding: 20px 0px;
+}
+.rightside{
+    width: 45%;
+    height: 70%;
+    border-style: outset ; 
+    border-width: 5px ;
+    border-radius: 2rem 1rem 2rem 1rem;
+    border-color: rgb(240, 166, 6);
+    background-color: rgb(247, 245, 245);
+   
+}
+h2{
+    text-align: center;
+    font-size: 35px;
+}
+.input-container{
+    width: 350px;
+    height: auto;
+    
+    margin-left: 30px;
+}
+.input{
+    width: 90%;
+    margin-top: 10px;
+    height: 50px;
+    padding: 5px;
+    background-color: #dedde4;
+    align-items: start;
+}
+input{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 90%;
+    line-height:40px;
+    font-size: 15px;
+}
+.btn { 
+    margin: .300rem;
+    padding: 10px 20px; 
+}
+.btn:hover{
+    background-color: rgb(7, 196, 123);
+}
+
+button{
+    color:red;
+}
+i{
+    opacity: 90%;
+    color : black;
+}
+
+p{
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.hr-text{
+    text-align:center;
+    margin:25px auto;
+    max-width: 450px;
+    position: relative;
+}
+
+.social-items{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+.social-items a{
+    display: inline-block;
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #002793;
+    margin: 0px 10px;
+}
+a{
+    text-decoration: none;
+}
+a i{
+    color: #002793;
+    opacity: 100%;
+}
+a .fa{
+    line-height: 40px;
+}
+h5{
+    text-align: center;
+    color:red;
+    margin:60px 0px;
+    font-size: 18px;
+}
+span{
+    text-decoration: underline;
+    font-size: 20px;
+    cursor: pointer;
+}
+a:hover{
+    color:red;
+}
+a:hover i{
+    color: red;
+}
+label{
+    color:rgb(7, 196, 123);
+    font-style: italic;
+}
+
+/*------------Responsive--------------*/
+@media screen and (max-width:768px){
+    .leftside{
+        display: none;
+    }
+    .rightside{
+        width: 100%;
+    }
+}
+
+.eyeicon{
+   color: rgb(39, 38, 38);
+   margin-left: -30px;
+   padding-top: 6px;
+   position:absolute;
+    cursor: pointer;
+
+}

@@ -1,0 +1,29 @@
+<!-- The code written inside this template will be applicable to all other components
+    and can be toggled by specifying conditions -->
+
+<!-- navigation bar for the website is written here -->
+
+<h1><i class="fa-solid fa-graduation-cap fa-beat"></i> {{title}} </h1>
+
+<div class="topnav">
+  <a class="btn btn-2" routerLink="home" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home Page"><i class="fa-solid fa-landmark-dome" ></i> HOME</a>
+  <a class="btn btn-2" routerLink="about" data-bs-toggle="tooltip" data-bs-placement="bottom" title="About us"><i class="fa-regular fa-building"></i> ABOUT</a>
+  <a class="btn btn-2" routerLink="contact" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Contact us"><i class="fa-solid fa-phone-volume fa-bounce"></i> CONTACT</a>
+  <a class="btn btn-2" *ngIf="loginService.isUserLoggedIn()" routerLink="students" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View Students datalist"><i class="fa-solid fa-list-ol fa-spin"></i> STUDENTs LIST</a>
+  <a class="btn btn-2"*ngIf="loginService.isUserLoggedIn()" routerLink="create-student" data-bs-toggle="tooltip" data-bs-placement="bottom" title="create student data"><i class="fa-solid fa-person-circle-plus fa-flip"></i> ADD STUDENT</a>
+  <div class="topnav-right">
+    <a class="btn btn-2" routerLink="profile" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Profile card"><i class="fa-regular fa-id-card fa-fade"></i> PROFILE</a>
+    <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" routerLink="login" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click to login">LOGIN</a>
+    <a class="btn btn-2" *ngIf="loginService.isUserLoggedIn()" (click)="confirmLogout()" data-bs-toggle="tooltip" data-bs-placement="bottom" title="logs you out">LOG OUT</a>
+  </div>
+</div>
+
+<br>
+<div class = "container">
+  <router-outlet></router-outlet>
+</div>
+<br>
+
+<!-- <footer>
+  <h3>Copyright<sup style="font-size: 20px;">©</sup> 2023</h3>
+</footer> -->

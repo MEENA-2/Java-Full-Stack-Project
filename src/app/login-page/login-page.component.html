@@ -1,0 +1,46 @@
+<!-- This page is designed as flex having image in left side and Input fields in right side for the user to enter username and password to login.
+     if a new user visits, then there is a sign up routed below login button to take to registration page -->
+     
+<div class="form">  
+    <div class="leftside">
+        <br>
+        <img src="../../assets/sidePic1.webp" style="border-style: outset ; border-width: 5px ;border-color: rgb(20, 165, 209);"/>  
+    </div>
+    <br>
+
+    <div class="rightside">
+        <br>
+        <h2 style="color:rgb(16, 132, 226); ">LOGIN HERE!!!</h2>
+        <p style="color:red;font-size: 16px;">{{ message }}</p>
+        <div class="input-container" >
+            <label>Username : </label>
+            <div class="input">
+                <i class="fa fa-user" style="color: red;"></i> &nbsp;
+                <input type="text" name="username" placeholder=" Username" [(ngModel)]="username" required="required" minlength="5" maxlength="30"/>
+            </div>
+            <br>
+            <label>Password : </label>
+            <div class="input">
+                <i class="fa fa-lock" style="color: red;"></i> &nbsp;
+                <input [type]="changetype?'password':'text'" name="password" placeholder=" Password" [(ngModel)]="password" required="required" minlength="5" maxlength="12"/>
+				<span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i>
+                </span>
+            </div>
+            
+            <br>
+
+            <div class="text-center">
+                <button type="button" class="btn btn-info btn-small" (click)=checkLogin()> Login </button>
+            </div>
+            
+            <h5> 
+                Don't have an account? 
+                <span style="text-decoration: none;"> 
+                    <a href="signup" target="_top" style="color: lawngreen; " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Click to Register"> Sign Up </a>  
+                </span>
+            </h5>
+        </div>
+    </div>
+    
+</div>
+

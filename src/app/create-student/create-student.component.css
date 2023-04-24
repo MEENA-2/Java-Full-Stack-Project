@@ -1,0 +1,43 @@
+/* these stylings are created for adding styles to create component template
+to make a page more professional */
+
+h3{
+    color:rgb(239, 239, 241);
+    text-align: center;
+    background-color:deeppink;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    border-radius: 5px;
+}
+label{
+    font-size: 22px;
+    color:rgb(248, 19, 19);
+    font-family:monospace;
+    font-weight: bolder;
+}
+
+.input{
+    box-shadow: 0 4px 8px 2px rgb(197, 209, 21);
+}
+
+.btn:hover{
+    background-color: rgb(6, 207, 6);
+    box-shadow: 0 4px 8px 4px rgb(25, 136, 11);
+}
+
+.card {
+    opacity:0.8;
+    background-color: rgb(74, 171, 228);
+    text-align: center;
+    box-shadow: 2px 4px 8px 4px rgb(150, 4, 130);
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height:80%;
+    padding:20px;
+  }
+
+  .card:hover {
+    box-shadow: 16px 8px 16px 8px rgba(221, 68, 89, 0.966);
+  }

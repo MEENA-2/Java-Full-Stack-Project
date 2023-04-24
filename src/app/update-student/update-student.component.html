@@ -1,0 +1,100 @@
+<!-- this component template is done using card for updating a student data, that is created already.
+     Here, the value for data attributes for maintaining student info is got from input type -->
+
+<div class="card">
+  <div class="col-md-6 offset-md-3">
+    <h3>UPDATE STUDENT</h3>
+    <form (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label> Student Name </label>
+        <input
+          type="text"
+          class="form-control"
+          id="studentName"
+          [(ngModel)]= "student.studentName"
+          name="studentName"
+          placeholder="Name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label> Standard </label>
+        <input
+          type="number"
+          class="form-control"
+          id="standard"
+          [(ngModel)]="student.standard"
+          name="standard"
+          placeholder="standard"
+        />
+      </div>
+
+      <div class="form-group">
+        <label> ContactNo </label>
+        <input
+          type="number"
+          class="form-control"
+          id="contactNo"
+          [(ngModel)]="student.contactNo"
+          name="contactNo"
+          placeholder="Contact No"
+        />
+      </div>
+
+      <div class="form-group">
+        <label> E-mail </label>
+        <input type="email" class ="form-control input" id = "email"
+            [(ngModel)] = "student.email" name = "email" placeholder="Email Address" required="required">
+      </div>
+
+      <div class="form-group">
+          <label> D.O.B </label>
+          <input type="date" class ="form-control input" id = "dob"
+              [(ngModel)] = "student.dateOfBirth" name = "dateOfBirth" placeholder="DD/MM/YYYY" required="required">
+      </div>
+
+      <div class="form-group">
+          <label> district </label>
+          <input type="text" class ="form-control input" id = "district"
+              [(ngModel)] = "student.district" name = "district" placeholder="District" required="required">
+      </div>
+      
+      <div class="form-group">
+        <label> Fee Paid Or Not </label><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="feePaid" id="paid"  value="Paid" [(ngModel)] = "student.feePaid">
+            <label class="form-check-label" for="paid">Paid</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="feePaid" id="nonPaid" value="Not Paid" [(ngModel)] = "student.feePaid">
+            <label class="form-check-label" for="nonPaid">Not Paid</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label> Gender </label><br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" [(ngModel)] = "student.gender">
+            <label class="form-check-label" for="male">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="Female" [(ngModel)] = "student.gender">
+            <label class="form-check-label" for="female">Female</label>
+        </div>
+      </div>
+      
+      <div class="form-group">
+          <label> Pincode </label>
+          <input type="number" class ="form-control input" id = "pincode"
+              [(ngModel)] = "student.pincode" name = "pincode" placeholder="Pincode" required maxlength="6" minlength="6">
+      </div>   
+      
+      <br/>
+    
+      <div class="text-center">
+        <button class="btn btn-success" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

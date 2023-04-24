@@ -1,0 +1,33 @@
+/* Styling Course component html page to be responsive and impressive */
+
+.d-flex{
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#cards{
+    margin-top:9%;
+}
+
+.btn-secondary{
+    margin-left:10%;
+    background-color:linen;
+    color:deeppink;
+}
+
+.dropdown-menu{
+    background-color:linen;
+    color:deeppink;
+}
+
+.dropdown-menu:hover{
+    background-color:teal;
+    color:black;
+}
+
+.card-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color:red;
+    font-size: 16px;
+}
